@@ -18,6 +18,7 @@
     <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.release>15</maven.compiler.release>
     <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
     <project.build.outputTimestamp>2023-05-10T07:42:50Z</project.build.outputTimestamp>
 
@@ -304,6 +305,16 @@
       </snapshots>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>internal.repo</id>
+      <name>Internal repo</name>
+      <url>file:///Users/mountakha/.maven_repository/</url>
+      <layout>default</layout>
+    </repository>
+</distributionManagement>
 
   <pluginRepositories>
     <pluginRepository>
